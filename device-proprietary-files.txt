@@ -15,16 +15,16 @@ vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
 # Radio
-bin/efsks
-bin/ks
-bin/qcks
+#bin/efsks
+#bin/ks
+#bin/qcks
 bin/qmuxd
 bin/rfs_access
 bin/rild
 bin/rmt_storage
 lib/libreference-ril.so
 lib/libril.so
-lib/libsec-ril.so
+#lib/libsec-ril.so
 lib/libsecnativefeature.so
 lib/libsecril-client.so
-vendor/lib/libril-qcril-hook-oem.so
+#vendor/lib/libril-qcril-hook-oem.so

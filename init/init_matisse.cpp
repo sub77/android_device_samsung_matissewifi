@@ -35,7 +35,7 @@
 #include "log.h"
 #include "util.h"
 
-#include "init_msm8974.h"
+#include "init_msm8226.h"
 
 void init_target_properties()
 {
@@ -45,36 +45,36 @@ void init_target_properties()
 
     std::string bootloader = property_get("ro.bootloader");
 
-    if (bootloader.find("G900W8") == 0) {
-        /* kltecan */
-        property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DPD3:user/release-keys");
-        property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DPD3 release-keys");
-        property_set("ro.product.model", "SM-G900W8");
-        property_set("ro.product.device", "kltecan");
-    } else if (bootloader.find("G900T") == 0) {
-        /* kltetmo */
-        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GPE1:user/release-keys");
-        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GPE1 release-keys");
-        property_set("ro.product.model", "SM-G900T");
-        property_set("ro.product.device", "kltetmo");
-    } else if (bootloader.find("G900M") == 0) {
-        /* klteub */
-        property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CPJ2:user/release-keys");
-        property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CPJ2 release-keys");
-        property_set("ro.product.model", "SM-G900M");
-        property_set("ro.product.device", "klte");
-    } else if (bootloader.find("G900A") == 0) {
-        /* klteatt */
-        property_set("ro.build.fingerprint", "samsung/klteuc/klteatt:5.1.1/LMY47X/G900AUCU4CPA1:user/release-keys");
-        property_set("ro.build.description", "klteuc-user 5.1.1 LMY47X G900AUCU4CPA1 release-keys");
-        property_set("ro.product.model", "SM-G900A");
-        property_set("ro.product.device", "klteatt");
+    if (bootloader.find("T530NU") == 0) {
+        /* matissewifiue */
+        property_set("ro.build.fingerprint", "samsung/matissewifiue/matissewifi:5.0.2/LRX22G/T530NUU1BOJ4:user/release-keys");
+        property_set("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUU1BOJ4 release-keys");
+        property_set("ro.product.model", "SM-T530NU");
+        property_set("ro.product.device", "matissewifiue");
+    } else if (bootloader.find("T530XX") == 0) {
+        /* matissewifixx */
+        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOJ4:user/release-keys");
+        property_set("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
+        property_set("ro.product.model", "SM-T530");
+        property_set("ro.product.device", "matissewifi");
+    } else if (bootloader.find("T531") == 0) {
+        /* matisse3gxx */
+        property_set("ro.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys");
+        property_set("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOE6 release-keys");
+        property_set("ro.product.model", "SM-T531");
+        property_set("ro.product.device", "matisse3g");
+    } else if (bootloader.find("T535") == 0) {
+        /* matisseltexx */
+        property_set("ro.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXU1BOL1:user/release-keys");
+        property_set("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXU1BOL1 release-keys");
+        property_set("ro.product.model", "SM-T535");
+        property_set("ro.product.device", "matisselte");
     } else {
-        /* kltexx */
-        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CPHW:user/release-keys");
-        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CPHW release-keys");
-        property_set("ro.product.model", "SM-G900F");
-        property_set("ro.product.device", "klte");
+        /* fallback */
+        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOJ4:user/release-keys");
+        property_set("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
+        property_set("ro.product.model", "SM-T530");
+        property_set("ro.product.device", "matissewifi");
     }
 
     std::string device = property_get("ro.product.device");

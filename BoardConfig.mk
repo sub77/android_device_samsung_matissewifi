@@ -12,28 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common klte
--include device/samsung/klte-common/BoardConfigCommon.mk
+# inherit from common matissewifi
+-include device/samsung/matisse-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltexx,kltelra,kltetmo,kltecan,klteatt,klteub,klteacg,klte
+TARGET_OTA_ASSERT_DEVICE := matissewifiue,matissewifixx,matissewifi
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8974
-TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klte/init/init_klte.cpp
+TARGET_INIT_VENDOR_LIB := libinit_msm8226
+TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matissewifi/init/init_matisse.cpp
 TARGET_UNIFIED_DEVICE := true
-
-# NFC
-BOARD_NFC_CHIPSET := pn547
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
-BOARD_CACHEIMAGE_PARTITION_SIZE := 524288000
+BOARD_CACHEIMAGE_PARTITION_SIZE := 721420288
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2548039680
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2097152000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12562627584
 
 # inherit from the proprietary version
--include vendor/samsung/klte/BoardConfigVendor.mk
+-include vendor/samsung/matissewifi/BoardConfigVendor.mk

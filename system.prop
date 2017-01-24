@@ -1,8 +1,12 @@
 # Radio
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libsec-ril.so
-ro.ril.telephony.mqanelements=6
-# GSM Properties
-telephony.lteOnGsmDevice=1
+
+# Default Network Mode (For 4G / Type3 device)
 ro.telephony.default_network=9
-ro.telephony.ril.config=newDialCode
+
+# Use CDMALTE Phone (For 4G model)
+telephony.lteOnCdmaDevice=0
+
+# Support Global Mode (For global mode model)
+ro.config.multimode_cdma=1
