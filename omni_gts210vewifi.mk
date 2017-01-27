@@ -1,7 +1,7 @@
 $(call inherit-product, device/samsung/gts210vewifi/full_gts210vewifi.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/omni/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
 
 PRODUCT_NAME := omni_gts210vewifi
 PRODUCT_BRAND := samsung
