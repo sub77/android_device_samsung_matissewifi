@@ -27,5 +27,20 @@ TARGET_KERNEL_CONFIG := gts210vewifi_defconfig
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# TWRP
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_INCLUDE_CRYPTO := true
+TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_THEME := landscape_hdpi
+
 # inherit from the proprietary version
 -include vendor/samsung/gts210vewifi/BoardConfigVendor.mk
