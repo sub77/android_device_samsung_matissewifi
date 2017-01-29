@@ -51,12 +51,14 @@ void init_target_properties()
         property_set("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUU1BOJ4 release-keys");
         property_set("ro.product.model", "SM-T530NU");
         property_set("ro.product.device", "matissewifiue");
+        property_set("ro.radio.noril", "yes");
     } else if (bootloader.find("T530XX") == 0) {
         /* matissewifixx */
         property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOJ4:user/release-keys");
         property_set("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
         property_set("ro.product.model", "SM-T530");
         property_set("ro.product.device", "matissewifi");
+        property_set("ro.radio.noril", "yes");
     } else if (bootloader.find("T531") == 0) {
         /* matisse3gxx */
         property_set("ro.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys");
@@ -75,6 +77,7 @@ void init_target_properties()
         property_set("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
         property_set("ro.product.model", "SM-T530");
         property_set("ro.product.device", "matissewifi");
+        property_set("ro.radio.noril", "yes");
     }
 
     std::string device = property_get("ro.product.device");
