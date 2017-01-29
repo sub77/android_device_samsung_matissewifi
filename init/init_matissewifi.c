@@ -54,16 +54,16 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "T320UE")) {
-        property_set("ro.build.fingerprint", "samsung/mondrianwifiue/mondrianwifiue:4.4.2/KOT49H/T320UEU1ANAI:user/release-keys");
-        property_set("ro.build.description", "mondrianwifiue-user 4.4.2 KOT49H T320UEU1ANAI release-keys");
-        property_set("ro.product.model", "SM-T320");
-        property_set("ro.product.device", "mondrianwifiue");
+    if (strstr(bootloader, "T530UE")) {
+        property_set("ro.build.fingerprint", "samsung/matissewifiue/matissewifiue:4.4.2/KOT49H/T530UEU1ANAI:user/release-keys");
+        property_set("ro.build.description", "matissewifiue-user 4.4.2 KOT49H T530UEU1ANAI release-keys");
+        property_set("ro.product.model", "SM-T530");
+        property_set("ro.product.device", "matissewifiue");
     } else {
-        property_set("ro.build.fingerprint", "samsung/mondrianwifixx/mondrianwifi:4.4.2/KOT49H/T320XXU1ANAI:user/release-keys");
-        property_set("ro.build.description", "mondrianwifixx-user 4.4.2 KOT49H T320XXU1ANAI release-keys");
-        property_set("ro.product.model", "SM-T320");
-        property_set("ro.product.device", "mondrianwifi");
+        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:4.4.2/KOT49H/T530XXU1ANAI:user/release-keys");
+        property_set("ro.build.description", "matissewifixx-user 4.4.2 KOT49H T530XXU1ANAI release-keys");
+        property_set("ro.product.model", "SM-T530");
+        property_set("ro.product.device", "matissewifi");
     }
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
