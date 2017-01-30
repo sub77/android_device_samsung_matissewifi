@@ -1,3 +1,6 @@
+# Camera
+camera2.portability.force_api=1
+
 # display
 lockscreen.rot_override=true
 ro.hdcp2.rx=tz
@@ -14,8 +17,23 @@ ro.gps.agps_provider=1
 ro.qc.sdk.izat.premium_enabled=0
 ro.qc.sdk.izat.service_mask=0x0
 
+# Media
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
+# Perf
+ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
+
 # radio
 ro.radio.noril=yes
+
+# Sensors
+ro.qc.sdk.gestures.camera=false
+ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.sensors.gestures=true
+
+# Storage
+ro.sys.sdcardfs=true
 
 # CWMR Options
 ro.cwm.forbid_format=/boot,/firmware,/firmware-modem

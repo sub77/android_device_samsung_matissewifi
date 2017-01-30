@@ -47,8 +47,9 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8226 \
-    libshim_qcopt \
-    libxml2
+    libxml2 \
+    Snap \
+    bson
 
 # Gello
 PRODUCT_PACKAGES += \
@@ -106,6 +107,7 @@ PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.crda.sh \
     init.input.sh \
+    init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
@@ -118,10 +120,6 @@ PRODUCT_PACKAGES += \
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
-
-# rmt_storage
-PRODUCT_PACKAGES += \
-    libshim_rmt_storage
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -149,8 +147,8 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(TARGET_KERNEL_SOURCE)/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(TARGET_KERNEL_SOURCE)/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Common msm8226
