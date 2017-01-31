@@ -23,13 +23,6 @@
 
     <bool name="config_deskDockEnablesAccelerometer">false</bool>
 
-         Zone 0:        0 <= LUX < array[0]
-         Zone 1:        array[0] <= LUX < array[1]
-         ...
-         Zone N:        array[N - 1] <= LUX < array[N]
-         Zone N + 1     array[N] <= LUX < infinity
-
-         Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>15</item>
         <item>150</item>
@@ -253,5 +246,5 @@
     <integer name="config_overrideHasPermanentMenuKey">2</integer>
 
     <!-- Enable blur support -->
-    <bool name="config_uiBlurEnabled">true</bo
+    <bool name="config_uiBlurEnabled">true</bool>
 </resources>

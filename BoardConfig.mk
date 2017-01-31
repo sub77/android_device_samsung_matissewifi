@@ -15,6 +15,8 @@
 # inherit from common msm8226
 -include device/samsung/msm8226-common/BoardConfigCommon.mk
 
+DEVICE_PATH := device/samsung/matissewifi
+
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/matissewifi/include
 
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifiue,matissewifixx
@@ -69,6 +71,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # PowerHAL
 #TARGET_POWERHAL_VARIANT := qcom
 #TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/matissewifi/power/power_ext.c
+
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
