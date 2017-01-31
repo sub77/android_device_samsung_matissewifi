@@ -1,0 +1,35 @@
+# Qualcomm framework
+lib/libmdmdetect.so
+#lib/libperipheral_client.so
+#vendor/lib/libdsucsd.so
+vendor/lib/libdiag.so
+#vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libnetmgr.so
+vendor/lib/libqcci_legacy.so
+#vendor/lib/libqdi.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+#vendor/lib/libdsnetutils.so
+
+# Radio
+bin/qmuxd
+bin/radish
+bin/rfs_access
+bin/rild
+bin/rmt_storage
+lib/libreference-ril.so
+lib/libril.so
+lib/librilutils.so
+#lib/libsec-ril.so
+#lib/libsec-ril-dsds.so
+lib/libsecnativefeature.so
+lib/libsecril-client.so
+vendor/lib/libconfigdb.so
+#vendor/lib/libril-qcril-hook-oem.so
