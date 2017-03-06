@@ -15,10 +15,10 @@
 #
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/samsung/gts210vewifi/gts210vewifi-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Inherit from msm8976-common
-$(call inherit-product, device/samsung/msm8976-common/msm8976.mk)
+# Inherit from msm8226-common
+$(call inherit-product, device/samsung/msm8226-common/msm8226.mk)

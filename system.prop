@@ -10,7 +10,7 @@ ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
 # Display
-ro.sf.hwrotation=270
+ro.sf.lcd_density=160
 
 # Radio
-ro.radio.noril=yes
+ro.radio.noril=1

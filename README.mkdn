@@ -1,20 +1,17 @@
-Device Tree for Samsung Galaxy Tab S2 9.7 (gts210vewifi)
+Device Tree for Samsung Galaxy Tab 4 10.1 (matissewifi)
 ===========================================
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Quad-core 1.4 GHz Cortex-A53 & Quad-core 1.8 GHz Cortex-A72
-Chipset | Qualcomm MSM8976 Snapdragon 652
-GPU     | Adreno 510
-Memory  | 3 GB RAM
-Shipped Android Version | 6.0.1
-Storage | 32/64 GB
-MicroSD | Up to 256 GB
-Battery | Non-removable Li-Ion 5870 mAh battery
-Display | 1536 x 2048 pixels (~264 ppi pixel density)
-Camera  | Primary: 8 MP
-	| Secondary: 2.1 MP
+CPU     | Quad-core 1.2 GHz Cortex-A7
+Chipset | Qualcomm MSM8226 Snapdragon 400
+GPU     | Adreno 330
+Memory  | 1,5 GB RAM
+Android | 4.4.2
+Storage | 16/32 GB
+MicroSD | Up to 64 GB
+Battery | Non-removable Li-Ion 6800 mAh battery
+Display | 1280 x 800 pixels (~170 ppi pixel density)
+Camera  | Primary: 3 MP | Secondary: 1.3 MP
 
-Copyright 2017 - The LineageOS Project.
-
-![Samsung Galaxy Tab S2 9.7](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s2-97-2.jpg "Samsung Galaxy Tab S2 9.7")
+![Samsung Galaxy Tab 4 10.1](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-4-101-1.jpg "Samsung Galaxy Tab 4 10.1")

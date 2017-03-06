@@ -18,8 +18,8 @@
 set -e
 
 # Required!
-export DEVICE=gts210vewifi
-export DEVICE_COMMON=msm8976-common
+export DEVICE=matissewifi
+export DEVICE_COMMON=msm8226-common
 export VENDOR=samsung
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
