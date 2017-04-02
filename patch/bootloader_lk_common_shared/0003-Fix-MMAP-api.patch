@@ -1,0 +1,26 @@
+From 5045ba8cefc8006e44503d07b801e7536a90bb1e Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Sun, 2 Apr 2017 22:04:10 +0000
+Subject: [PATCH 3/3] Fix MMAP api
+
+---
+ uefiapi/target/msm8226.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/uefiapi/target/msm8226.c b/uefiapi/target/msm8226.c
+index 272c9346..4c58019d 100644
+--- a/uefiapi/target/msm8226.c
++++ b/uefiapi/target/msm8226.c
+@@ -46,7 +46,8 @@ void uefiapi_platform_init_post(void)
+ void* uefiapi_mmap_add_platform_mappings(void *pdata, lkapi_mmap_add_cb_t cb)
+ {
+     // iomap
+-    pdata = cb(pdata, MSM_IOMAP_BASE, MSM_IOMAP_BASE, (MSM_IOMAP_END - MSM_IOMAP_BASE), LKAPI_MEMORYATTR_DEVICE, 0, 0);
++    pdata = cb(pdata, 0x06d00000, 1*MB, LKAPI_MMAP_RANGEFLAG_RESERVED,
++               LKAPI_MEMORYATTR_DEVICE, 0, LKAPI_MMAP_RANGEFLAG_UNUSED|LKAPI_MMAP_RANGEFLAG_DRAM);
+ 
+     return pdata;
+ }
+-- 
+2.12.1
+

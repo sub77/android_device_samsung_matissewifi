@@ -1,0 +1,28 @@
+From 1e0824829fa120f148116eb097ccef3e05a77f9b Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Sun, 2 Apr 2017 21:59:23 +0000
+Subject: [PATCH] Enable selinux permissive by default
+
+---
+ EFIDroidUi.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/EFIDroidUi.c b/EFIDroidUi.c
+index 5a348f4..c33cbde 100644
+--- a/EFIDroidUi.c
++++ b/EFIDroidUi.c
+@@ -311,9 +311,9 @@ main (
+   if(!UtilVariableExists(L"ui-show-fastboot", &gEFIDroidVariableGuid))
+     SettingBoolSet("ui-show-fastboot", TRUE);
+   if(!UtilVariableExists(L"ui-autoselect-last-boot", &gEFIDroidVariableGuid))
+-    SettingBoolSet("ui-autoselect-last-boot", FALSE);
++    SettingBoolSet("ui-autoselect-last-boot", TRUE);
+   if(!UtilVariableExists(L"boot-force-permissive", &gEFIDroidVariableGuid))
+-    SettingBoolSet("boot-force-permissive", FALSE);
++    SettingBoolSet("boot-force-permissive", TRUE);
+ 
+   // init UI
+   Status = MenuInit();
+-- 
+2.12.1
+

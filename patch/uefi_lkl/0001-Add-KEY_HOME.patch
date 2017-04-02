@@ -1,0 +1,25 @@
+From 3f7e0cbf4f56e3dd86670e3ed0effeaa4e70efe7 Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Sun, 2 Apr 2017 22:05:37 +0000
+Subject: [PATCH] Add KEY_HOME
+
+---
+ include/uapi/linux/input-event-codes.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/uapi/linux/input-event-codes.h b/include/uapi/linux/input-event-codes.h
+index 3af60ee69053..78769fb7f0e7 100644
+--- a/include/uapi/linux/input-event-codes.h
++++ b/include/uapi/linux/input-event-codes.h
+@@ -173,7 +173,7 @@
+ #define KEY_SYSRQ		99
+ #define KEY_RIGHTALT		100
+ #define KEY_LINEFEED		101
+-#define KEY_HOME		102
++#define KEY_HOME		172
+ #define KEY_UP			103
+ #define KEY_PAGEUP		104
+ #define KEY_LEFT		105
+-- 
+2.12.1
+

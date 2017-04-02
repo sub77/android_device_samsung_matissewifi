@@ -1,0 +1,68 @@
+From 33979e69f60221c46132797609a48f7d9c3878a9 Mon Sep 17 00:00:00 2001
+From: sub77 <sub77@ymail.com>
+Date: Sun, 2 Apr 2017 22:02:45 +0000
+Subject: [PATCH 2/3] Add KEY_HOME
+
+---
+ lib/newkeys/newkeys.c    | 11 +++++++++++
+ uefiapi/target/msm8226.c |  3 +++
+ 2 files changed, 14 insertions(+)
+
+diff --git a/lib/newkeys/newkeys.c b/lib/newkeys/newkeys.c
+index 537f790c..de83960f 100644
+--- a/lib/newkeys/newkeys.c
++++ b/lib/newkeys/newkeys.c
+@@ -79,6 +79,13 @@ int newkeys_post_event(uint16_t code, int16_t value)
+                 seq[seqsz++] = 0x5b;
+                 seq[seqsz++] = 0x44;
+                 break;
++
++            case KEY_HOME:
++                seq[seqsz++] = 0x1b;
++                seq[seqsz++] = 0x5b;
++                seq[seqsz++] = 13;
++                break;
++
+         }
+     }
+ 
+@@ -195,6 +202,10 @@ int newkeys_set_report_key(newkey_event_source_t *source, uint16_t code, uint16_
+                             // report 'e'
+                             newkeys_post_event(0x65, 1);
+                             newkeys_post_event(0x65, 0);
++                        } else if (newkeys_get_keystate(KEY_HOME)) {
++                            // report 'e'
++                            newkeys_post_event(13, 1);
++                            newkeys_post_event(13, 0);
+                         } else {
+                             // report spacebar
+                             newkeys_post_event(32, 1);
+diff --git a/uefiapi/target/msm8226.c b/uefiapi/target/msm8226.c
+index f6264222..272c9346 100644
+--- a/uefiapi/target/msm8226.c
++++ b/uefiapi/target/msm8226.c
+@@ -1,4 +1,5 @@
+ #include <err.h>
++#include <board.h>
+ #include <stdint.h>
+ #include <pm8x41.h>
+ #include <dev/newkeys.h>
+@@ -12,6 +13,7 @@
+ 
+ uint32_t target_volume_up(void);
+ uint32_t target_volume_down(void);
++uint32_t target_home(void);
+ 
+ static int target_power_key(void)
+ {
+@@ -23,6 +25,7 @@ static int event_source_poll(newkey_event_source_t *source)
+     newkeys_set_report_key(source, 13, target_power_key());
+     newkeys_set_report_key(source, KEY_VOLUMEUP, target_volume_up());
+     newkeys_set_report_key(source, KEY_VOLUMEDOWN, target_volume_down());
++    newkeys_set_report_key(source, KEY_HOME, target_home());
+ 
+     return NO_ERROR;
+ }
+-- 
+2.12.1
+
