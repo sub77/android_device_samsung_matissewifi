@@ -1,6 +1,4 @@
-#
-# Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +11,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-$(call inherit-product, device/samsung/matissewifi/full_matissewifi.mk)
+# Inherit from matissewifi device
+$(call inherit-product, device/samsung/matissewifi/device.mk)
 
-PRODUCT_DEVICE := matissewifi
-PRODUCT_NAME := lineage_matissewifi
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := full_matissewifixx
+PRODUCT_DEVICE := matissewifixx
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := matissewifi
